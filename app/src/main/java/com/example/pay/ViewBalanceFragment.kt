@@ -19,7 +19,6 @@ class ViewBalanceFragment : Fragment(R.layout.fragment_view_balance) {
 
         SharedPref.init(requireContext())
 
-
         val transactionAmount = arguments?.getLong("transAmt")
         remainingBal = (tvTotalBal.text.toString().toLong() - transactionAmount!!).toInt()
         tvTotalBal.text = remainingBal.toString()
